@@ -7,6 +7,9 @@
  * PSR-4 autoloader.
  */
 require 'vendor/autoload.php';
+require 'config.php';
+
+use Illuminate\Database\Capsule\Manager as DB;
 
 /**
  * Step 2: Instantiate a Slim application
@@ -27,9 +30,19 @@ $app = new Slim\App();
  * is an anonymous function.
  */
 $app->get('/', function ($request, $response, $args) {
-    $response->write("Welcome to Slim!");
-    return $response;
+    echo 'Welcome to slim3.5 class :P ';
 });
+//
+//$app->get('/packages', function ($request, $response, $args) {   
+//    AppController::getPackages();   
+//});
+
+$app->get('/packages[/{id}]', function ($request, $response, $args) {
+   
+    AppController::getPackages( $args['id'] );   
+});
+
+
 
 $app->get('/hello[/{name}]', function ($request, $response, $args) {
     $response->write("Hello, " . $args['name']);

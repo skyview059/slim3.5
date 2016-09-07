@@ -11,6 +11,7 @@ class ComposerStaticInit886f7c28c77b3045c3cbcaeb390138be
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        'd4045b430ad4179ae22da16f7c088423' => __DIR__ . '/../..' . '/helper/MyHelper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -142,6 +143,8 @@ class ComposerStaticInit886f7c28c77b3045c3cbcaeb390138be
     );
 
     public static $classMap = array (
+        'AppController' => __DIR__ . '/../..' . '/controllers/AppController.php',
+        'AppModel' => __DIR__ . '/../..' . '/models/AppModel.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',

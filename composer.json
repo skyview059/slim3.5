@@ -39,13 +39,22 @@
         "squizlabs/php_codesniffer": "^2.5",
         "phpunit/phpunit": "^4.0"
     },
+    
+   
     "provide": {
         "psr/http-message-implementation": "1.0"
     },
     "autoload": {
         "psr-4": {
             "Slim\\": "Slim"
-        }
+        },
+        "classmap":[
+            "models", "controllers"
+        ],
+        "files":[
+            "helper/MyHelper.php"
+        ]
+        
     },
     "scripts": {
         "test": [
