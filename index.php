@@ -32,15 +32,83 @@ $app = new Slim\App();
 $app->get('/', function ($request, $response, $args) {
     echo 'Welcome to slim3.5 class :P ';
 });
-//
-//$app->get('/packages', function ($request, $response, $args) {   
-//    AppController::getPackages();   
-//});
 
-$app->get('/packages[/{id}]', function ($request, $response, $args) {
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+$app->get('/packages[/{id}]', function ($request, $response, $args) {   
     AppController::getPackages( $args['id'] );   
 });
+
+
+
+$app->get('/facebook', function ($request, $response, $args) {   
+   
+   $curl = new Curl\Curl();
+   $curl->get('http://graph.facebook.com/flickmedialtd');
+   echo '<pre>';
+   print_r( $curl );
+} );
+
+
+
+// Routing with callback function // bdDateFormat function located in MyHleper.php 
+$app->get('/test_function', 'bdDateFormat' );
+
+
+
+
+
+/*
+$app->get('/create/package', function ($request, $response, $args) {    
+    echo 
+    '<form method="post" action="/slim3.5/create/package">'
+    .'<input type="text" name="name" value="Rabita">'
+    .'<input type="text" name="age" value="25">'
+    .'<input type="submit" value="Test">'                    
+    .'</form>';
+});
+
+
+$app->post('/create/package', function ($request, $response, $args) {   
+    // 
+    echo 'Post Method';
+    dd(  );    
+});
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

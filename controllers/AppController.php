@@ -24,4 +24,9 @@ class AppController {
         }                                            
     }
     
+    
+    function test(){
+        echo 'Test';
+    }
+    
 }
