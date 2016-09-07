@@ -1,19 +1,7 @@
-# Slim example
+# Slim - Web API Testing... trying to build mobile app 
 
 1. Install composer
+git clone https://github.com/skyview059/slim3.5.git
 
-      ```text
-      $ cd Slim
-      $ composer install
-      ```
-
-2. Run php server
-
-      ```text
-      $ cd Slim
-      $ php -S localhost:8888 -t example example/index.php
-      ```
-
-3. Open browser
-
-      Open http://localhost:8888 in your browser and you will see 'Welcome to Slim!'
+2. Open browser
+run localhost/path/to/project/
